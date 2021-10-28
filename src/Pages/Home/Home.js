@@ -45,16 +45,16 @@ const Home = () => {
                 </div>
             </div>
             <div className="container py-5 mt-5 ">
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 events">
+                <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 events">
                     {
                         events.map(event => {
-                            return <div key={event._id} class="col">
+                            return <div key={event._id} className="col">
                                 <Link to={`/registration/${event._id}`} className="text-decoration-none" onClick={notify}>
-                                    <div class="card h-100">
-                                        <img src={event.image ? event.image : noImg} class="card-img-top" alt="..." />
-                                        <div class="card-body" style={{ backgroundColor: `${event.backgroundColor}` }}>
-                                            <h5 class="card-title">{event.title}</h5>
-                                            {/* <p class="card-text"></p> */}
+                                    <div className="card h-100">
+                                        <img src={event.image ? event.image : noImg} className="card-img-top" alt="..." />
+                                        <div className="card-body" style={{ backgroundColor: `${event.backgroundColor}` }}>
+                                            <h5 className="card-title">{event.title}</h5>
+                                            {/* <p className="card-text"></p> */}
                                         </div>
                                     </div>
                                 </Link>

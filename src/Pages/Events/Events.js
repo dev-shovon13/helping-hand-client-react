@@ -50,7 +50,7 @@ const Events = () => {
                 <div className="row row-cols-1 row-cols-md-2 g-4">
                     {
                         events.map(event => {
-                            return <div className="col">
+                            return <div key={event._id} className="col">
                                 <div className="bg-white radius p-3 d-flex event-body">
                                     <img src={event.image} alt="" className="img-fluid event-img radius me-3" />
                                     <div>

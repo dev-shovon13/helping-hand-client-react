@@ -15,7 +15,7 @@ import Swal from 'sweetalert2'
 
 const Admin = () => {
     const [startDate, setStartDate] = useState(new Date());
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    // const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
     const [events, setEvents] = useState([])
     useEffect(() => {
@@ -35,7 +35,7 @@ const Admin = () => {
         const text = textRef.current.value
         const date = startDate
         const image = imageRef.current.value
-        const backgroundColor = `#${randomColor}`
+        const backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`
 
         const newEvent = { title, text, date, image, backgroundColor }
 
@@ -82,19 +82,19 @@ const Admin = () => {
                 <title>Admin Panel | Helping Hand</title>
                 <meta name="This is the Admin page of Helping Hand" content="Helping Hand- Volunteer Website" />
             </Helmet>
-            <div class="d-flex align-items-start">
+            <div className="d-flex align-items-start">
                 <div className="start">
-                    <div class=" menu nav flex-column nav-pills bg-white p-5 pt-3 pe-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div className=" menu nav flex-column nav-pills bg-white p-5 pt-3 pe-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <Link to="/home">
                             <img src={logo} alt="" className="mb-3" height="40px" width="130px" />
                         </Link>
-                        <span class="admin-btn my-2 active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><FontAwesomeIcon icon={faUserFriends} className="me-3" />Volunteer Register List</span>
-                        <span class="admin-btn my-2 " id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><FontAwesomeIcon icon={faPlus} className="me-3" />Add Events</span>
+                        <span className="admin-btn my-2 active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><FontAwesomeIcon icon={faUserFriends} className="me-3" />Volunteer Register List</span>
+                        <span className="admin-btn my-2 " id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><FontAwesomeIcon icon={faPlus} className="me-3" />Add Events</span>
                     </div>
                 </div>
                 <div className="end">
-                    <div class="tab-content" id="v-pills-tabContent">
-                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div className="tab-content" id="v-pills-tabContent">
+                        <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                             <h5 className="bg-white py-4 ps-5 text-dark">VOLUNTEER REGISTER LIST</h5>
                             <div className="bg-admin p-2">
                                 <div className="bg-white m-4 p-4 event-list text-dark">
@@ -107,7 +107,7 @@ const Admin = () => {
                                     </div>
                                     {
                                         events.map(event => {
-                                            return <div className="row p-2 mx-1">
+                                            return <div key={event._id} className="row p-2 mx-1">
                                                 <div className="col-3 text-secondary">{event.name}</div>
                                                 <div className="col-3 text-secondary">{event.email}</div>
                                                 <div className="col-2 text-secondary">{event.date.slice(0, 10)}</div>
@@ -119,39 +119,39 @@ const Admin = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                             <h5 className="bg-white py-4 ps-5 text-dark">ADD EVENT</h5>
                             <div className="bg-admin p-2">
                                 <div className="bg-white m-4 p-4 event-list text-dark">
                                     <form onSubmit={submitHandler}>
                                         <div className="row row-cols-2 g-4 fw-bold">
                                             <div className="col">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Event Title</label>
-                                                    <input required ref={titleRef} type="text" class="form-control" placeholder="Event Title" />
+                                                <div className="mb-3">
+                                                    <label className="form-label">Event Title</label>
+                                                    <input required ref={titleRef} type="text" className="form-control" placeholder="Event Title" />
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Description</label>
-                                                    <textarea ref={textRef} class="form-control" placeholder="Details" id="floatingTextarea2" style={{ height: "100px" }}></textarea>
+                                                <div className="mb-3">
+                                                    <label className="form-label">Description</label>
+                                                    <textarea ref={textRef} className="form-control" placeholder="Details" id="floatingTextarea2" style={{ height: "100px" }}></textarea>
                                                 </div>
                                             </div>
                                             <div className="col">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Select Date</label>
+                                                <div className="mb-3">
+                                                    <label className="form-label">Select Date</label>
                                                     <DatePicker className="form-control" selected={startDate} onChange={(date) => setStartDate(date)} dateFormat="dd/MM/yyyy" />
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Banner</label><br />
-                                                    <input required ref={imageRef} type="text" class="form-control" placeholder="Please Give Valid Image Link" />
+                                                <div className="mb-3">
+                                                    <label className="form-label">Banner</label><br />
+                                                    <input required ref={imageRef} type="text" className="form-control" placeholder="Please Give Valid Image Link" />
                                                 </div>
                                                 <p className="text-center mb-0">or,</p>
-                                                <div class="input-group mb-3">
-                                                    <input type="file" class="form-control" id="inputGroupFile02" />
-                                                    <button class="input-group-text" for="inputGroupFile02">Upload</button>
+                                                <div className="input-group mb-3">
+                                                    <input type="file" className="form-control" id="inputGroupFile02" />
+                                                    <button className="input-group-text" for="inputGroupFile02">Upload</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" className="btn btn-primary">Submit</button>
                                     </form>
                                 </div>
                             </div>

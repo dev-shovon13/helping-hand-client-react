@@ -72,21 +72,21 @@ const Registration = () => {
                     <div className="text-center p-5 pt-4">
                         <h5 className="mb-4">Register as a Volunteer</h5>
                         <form action="" onSubmit={submitHandler}>
-                            <div class="mb-4">
-                                <input type="text" class="reg-input w-100 border-bottom" placeholder="Full Name" value={user.displayName} ref={nameRef} />
+                            <div className="mb-4">
+                                <input type="text" className="reg-input w-100 border-bottom" placeholder="Full Name" value={user.displayName} ref={nameRef} />
                             </div>
-                            <div class="mb-4">
-                                <input type="text" class="reg-input w-100 border-bottom" placeholder="UserName or Email" value={user.email} ref={emailRef} />
+                            <div className="mb-4">
+                                <input type="text" className="reg-input w-100 border-bottom" placeholder="UserName or Email" value={user.email} ref={emailRef} />
                             </div>
-                            <div class="mb-4 d-flex">
+                            <div className="mb-4 d-flex">
                                 <DatePicker className="reg-input w-100 border-bottom" selected={startDate} onChange={(date) => setStartDate(date)} dateFormat="dd/MM/yyyy" ref={dateRef} />
-                                <p class="text-start text-secondary w-50">( Pick a Date )</p>
+                                <p className="text-start text-secondary w-50">( Pick a Date )</p>
                             </div>
-                            <div class="mb-4">
-                                <input type="text" class="reg-input w-100 border-bottom" placeholder="Description" ref={infoRef} />
+                            <div className="mb-4">
+                                <input type="text" className="reg-input w-100 border-bottom" placeholder="Description" ref={infoRef} />
                             </div>
-                            <div class="mb-4">
-                                <input type="text" class="reg-input w-100 border-bottom" placeholder="Event Name" value={userEvent.title} ref={titleRef} />
+                            <div className="mb-4">
+                                <input type="text" className="reg-input w-100 border-bottom" placeholder="Event Name" value={userEvent.title} ref={titleRef} />
                             </div>
                             <button className="btn reg-btn w-100 text-white" type='submit'>Register</button>
                         </form>
