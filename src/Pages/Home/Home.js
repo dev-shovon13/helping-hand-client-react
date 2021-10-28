@@ -4,9 +4,32 @@ import { Helmet } from 'react-helmet';
 import './Home.css'
 import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import noImg from '../../images/no-img.png'
+import useAuth from '../../hooks/useAuth';
+import Swal from 'sweetalert2'
 
 const Home = () => {
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    const { user } = useAuth()
+
+    const [events, setEvents] = useState([])
+    useEffect(() => {
+        fetch("https://helping-hand-shovon.herokuapp.com/events")
+            .then(res => res.json())
+            .then(data => setEvents(data))
+    }, [])
+
+    const notify = () => {
+        if (!user.uid) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Log In to Continue!',
+            })
+        }
+    }
+
     return (
         <div>
             <div className="home-bg">
@@ -22,18 +45,22 @@ const Home = () => {
                 </div>
             </div>
             <div className="container py-5 mt-5 ">
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 events">
-                    <div class="col">
-                        <Link to="/registration" className="text-decoration-none">
-                            <div class="card h-100">
-                                <img src="https://www.overallmotivation.com/wp-content/uploads/No-one-has-ever-become-poor-by-giving_charity-quotes.png" class="card-img-top" alt="..." />
-                                <div class="card-body" style={{ backgroundColor: `#${randomColor}` }}>
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">a simple title here</p>
-                                </div>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 events">
+                    {
+                        events.map(event => {
+                            return <div key={event._id} class="col">
+                                <Link to={`/registration/${event._id}`} className="text-decoration-none" onClick={notify}>
+                                    <div class="card h-100">
+                                        <img src={event.image ? event.image : noImg} class="card-img-top" alt="..." />
+                                        <div class="card-body" style={{ backgroundColor: `${event.backgroundColor}` }}>
+                                            <h5 class="card-title">{event.title}</h5>
+                                            {/* <p class="card-text"></p> */}
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
-                        </Link>
-                    </div>
+                        })
+                    }
                 </div>
             </div>
 

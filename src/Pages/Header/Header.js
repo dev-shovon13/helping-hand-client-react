@@ -51,7 +51,7 @@ const Header = () => {
                                         <NavLink to="/login">
                                             <Button variant="primary btn-sm" className="me-3 mb-2 mb-lg-0"><FontAwesomeIcon icon={faSignInAlt} className="me-2" />Login</Button>
                                         </NavLink>
-                                        <NavLink to="/admin">
+                                        <NavLink to="/adminLogin">
                                             <Button variant="outline-primary btn-sm"><FontAwesomeIcon icon={faUserLock} className="me-2" />Admin</Button>
                                         </NavLink>
                                     </div>

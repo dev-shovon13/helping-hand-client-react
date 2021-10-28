@@ -6,8 +6,8 @@ const Donations = () => {
     return (
         <div className="text-center donations-bg">
             <Helmet>
-                <title>Not Found</title>
-                <meta name="This is the not found page of Helping Hand" content="Helping Hand- Volunteer Website" />
+                <title>Donations | Helping Hand</title>
+                <meta name="This is the donations page of Helping Hand" content="Helping Hand- Volunteer Website" />
             </Helmet>
         </div>
     );

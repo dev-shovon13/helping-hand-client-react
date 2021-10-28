@@ -41,6 +41,7 @@ const LogIn = () => {
                             <img src={google} alt="" style={{ height: "45px" }} className="me-2 rounded-circle p-1" />
                             <span>Continue With Google</span>
                         </button>
+                        <p className="text-danger fw-bold mt-5">Admin ? <Link to="/adminLogin" className="text-decoration-none">Click Here to Login.</Link> </p>
                     </div>
                 </div>
             </div>

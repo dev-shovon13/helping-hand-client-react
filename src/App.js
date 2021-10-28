@@ -17,6 +17,7 @@ import Events from './Pages/Events/Events';
 import Donations from './Pages/Donations/Donations';
 import Blogs from './Pages/Blogs/Blogs';
 import Registration from './Pages/Registration/Registration';
+import AdminLogIn from './Pages/LogIn/AdminLogin';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route exact path="/admin">
             <Admin />
+          </Route>
+          <Route exact path="/adminLogin">
+            <AdminLogIn />
           </Route>
           <Route exact path="/events">
             <Header />
@@ -56,9 +60,9 @@ function App() {
           <Route exact path="/login">
             <LogIn />
           </Route>
-          <Route exact path="/registration">
+          <PrivateRoute exact path="/registration/:id">
             <Registration />
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <NotFound />
           </Route>

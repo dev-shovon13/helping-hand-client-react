@@ -23,10 +23,11 @@
 }
 .events .card img{
     border-radius: 10px;
+    height: 200px;
 }
 .events .card-body{
     color: white;
-    margin-top: -80px;
+    margin-top: -60px;
     background: rgb(0, 73, 116);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;

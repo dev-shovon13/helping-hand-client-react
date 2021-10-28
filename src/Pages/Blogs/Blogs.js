@@ -9,8 +9,8 @@ const Blogs = () => {
     return (
         <div className="bg-service">
             <Helmet>
-                <title>Blogs | Medizco Center</title>
-                <meta name="This is the blogs page of Medizco Center" content="Medizco Center- Hospital Website" />
+                <title>Blogs | Helping Hand</title>
+                <meta name="This is the blogs page of Helping Hand" content="Helping Hand- Hospital Website" />
             </Helmet>
             <Container className="pb-5 pt-3">
                 <div className="text-center py-3">
