@@ -1,0 +1,26 @@
+.active{
+    color: #007BFF
+}
+.bg-admin{
+    background: #F4F7FC;
+    height: 100vh
+}
+.bg-title{
+    background: #F4F7FC;
+    border-radius: 10px;
+}
+.admin-btn{
+    transition: all 0.5s;
+}
+.admin-btn:hover{
+color: #007BFF
+}
+.event-list{
+    border-radius: 20px;
+}
+.start{
+    width: 20%;
+}
+.end{
+    width: 80%;
+}

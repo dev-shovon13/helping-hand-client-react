@@ -1,0 +1,19 @@
+.event-bg{
+    background: #F4F7FC;
+    height: 100vh;
+}
+.event-img{
+    height: 150px;
+    width: 150px;
+}
+.radius{
+    border-radius: 10px;
+}
+.event-body{
+    position: relative;
+}
+.event-btn{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}

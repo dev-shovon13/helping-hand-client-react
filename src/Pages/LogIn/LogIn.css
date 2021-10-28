@@ -1,0 +1,42 @@
+
+.fs-icon{
+    font-size: 45px;
+    transition: all .5s;
+}
+.fs-icon:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.icon-twitter{
+    color: #009DED;
+}
+.icon-facebook{
+    color: #046FE5;
+}
+
+.log-width{
+    width: 450px;
+    height: 400px;
+    position: relative;
+}
+.login-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+.login-btn{
+    border-radius: 30px;
+
+}
+
+/* using some media query  */
+@media (max-width:668px) { 
+.log-width{
+    width: 95%;
+}
+@media (max-width:992px) { 
+
+}
+}

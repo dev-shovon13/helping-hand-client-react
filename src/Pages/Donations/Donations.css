@@ -1,0 +1,8 @@
+.donations-bg{
+    background-image:  url(../../images/under-construction.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    height: 88vh;
+}

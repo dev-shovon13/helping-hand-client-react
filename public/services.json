@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Intensive Care",
+    "info": "An intensive care unit (ICU), also known as an intensive therapy unit or intensive treatment unit (ITU) or critical care unit (CCU), is a special department of a hospital or health care facility.",
+    "img": "https://i.ibb.co/WcKVbhj/1.png"
+  },
+  {
+    "id": 2,
+    "name": "Expert Doctors",
+    "info": "A team of experts on your side. 500 world-renowned specialists, 450 specialties and sub-specialties. Our specialists’ top priority is you. Which means you get the assurance you deserve with accuracy you can trust.",
+    "img": "https://i.ibb.co/FsrQPhX/6.png"
+  },
+  {
+    "id": 3,
+    "name": "Lab Tests",
+    "info": "A medical procedure that involves testing a sample of blood, urine, or other substance from the body. Laboratory tests can help determine a diagnosis, plan treatment, check to see if treatment is working.",
+    "img": "https://i.ibb.co/4JchfFX/3.png"
+  },
+  {
+    "id": 4,
+    "name": "Ambulance Service",
+    "info": "Need emergency ambulance service near you? Medizco Center have the reliable high standard ambulance services near you to help you out in your hours of need to go anywhere in Bangladesh.",
+    "img": "https://i.ibb.co/VSrZDYZ/4.png"
+  },
+  {
+    "id": 5,
+    "name": "Health Checkup",
+    "info": "Each package offers a carefully selected panel of tests chosen to screen for the presence of disease or to help In identifying the cause of ongoing minor ailments. You can avail these packages.",
+    "img": "https://i.ibb.co/6tFp90t/5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Medicine at Discounted Price",
+    "info": "A pharmacy (also called 'drugstore' in American English or 'community pharmacy' or 'chemist' in Commonwealth English, or rarely, apothecary) is a retail shop which provides pharmaceutical drugs.",
+    "img": "https://i.ibb.co/C7QXw4B/2.png"
+  }
+]

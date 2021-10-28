@@ -1,0 +1,33 @@
+.home-bg{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    height: 500px;
+}
+.bg{
+    background-color: #FAFAFA;
+}
+.bg-service{
+    background-color: #F4F4F4;
+}
+.banner-search{
+    margin-left: -75px;
+}
+.events{
+    margin-top: -250px;
+}
+.events .card{
+    border-radius: 10px;
+}
+.events .card img{
+    border-radius: 10px;
+}
+.events .card-body{
+    color: white;
+    margin-top: -80px;
+    background: rgb(0, 73, 116);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
